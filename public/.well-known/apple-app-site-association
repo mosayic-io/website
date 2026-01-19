@@ -1,0 +1,29 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "<TEAM ID>.<BUNDLE ID>"
+        ],
+        "paths": [
+          "/link",
+          "/link/*"
+        ],
+        "components": [
+          {
+            "/": "/link"
+          },
+          {
+            "/": "/link/*"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "<TEAM ID>.<BUNDLE ID>"
+    ]
+  }
+}
