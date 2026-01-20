@@ -7,7 +7,6 @@
       "sha256_cert_fingerprints": [
         "<SHA256 CERT FINGERPRINT>"
       ]
-    },
-    "include": ["/link", "/link/*"]
+    }
   }
 ]

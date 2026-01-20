@@ -1,21 +1,17 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appIDs": [
-          "<TEAM ID>.<BUNDLE ID>"
-        ],
-        "paths": [
-          "/link",
-          "/link/*"
-        ],
+        "appIDs": ["<TEAM ID>.<BUNDLE ID>"],
         "components": [
           {
-            "/": "/link"
+            "/": "/",
+            "exclude": true,
+            "comment": "Exclude the homepage from opening the app"
           },
           {
-            "/": "/link/*"
+            "/": "/*",
+            "comment": "Allow all other paths to open the app"
           }
         ]
       }
