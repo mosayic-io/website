@@ -1,30 +1,64 @@
-# Astro Starter Kit: Portfolio
+# Kealy Studio Community Website Template
 
-```sh
-npm create astro@latest -- --template portfolio
+A website template for the Kealy Studio Community built with Astro. This template provides a marketing homepage, deep link handling for mobile apps, and automatic app store redirects.
+
+## Features
+
+- **Marketing Homepage** - A customizable landing page for your app
+- **Deep Link Support** - Configuration files for iOS Universal Links and Android App Links
+- **Smart Redirects** - Automatically redirects users to your app or the appropriate app store if the app isn't installed
+- **Platform Detection** - Detects iOS, Android, or desktop and handles each appropriately
+
+## Project Structure
+
+```
+├── public/
+│   ├── .well-known/
+│   │   ├── apple-app-site-association    # iOS Universal Links config
+│   │   └── assetlinks.json               # Android App Links config
+│   └── assets/
+├── src/
+│   ├── pages/
+│   │   ├── index.astro                   # Marketing homepage
+│   │   ├── link/index.astro              # Deep link redirect handler
+│   │   └── 404.astro
+│   ├── components/
+│   ├── layouts/
+│   └── styles/
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## Configuration
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Deep Link Redirect Page
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+Update the configuration in `src/pages/link/index.astro`:
 
-## 🧞 Commands
+```javascript
+const config = {
+  appName: "Your App Name",
+  appTagline: "Your App Tagline",
+  description: "Your app description",
+  appScheme: "yourappscheme",              // Deep link scheme (e.g., "myapp")
+  androidPackage: "com.yourcompany.yourapp",
+  appStoreUrl: "https://apps.apple.com/...",
+  playStoreUrl: "https://play.google.com/...",
+  websiteUrl: "https://yourapp.com",
+};
+```
 
-All commands are run from the root of the project, from a terminal:
+### iOS Universal Links
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Update `public/.well-known/apple-app-site-association` with your Apple Team ID and Bundle ID.
 
-## 👀 Want to learn more?
+### Android App Links
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Update `public/.well-known/assetlinks.json` with your package name and SHA256 certificate fingerprint.
+
+## Commands
+
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm install`     | Install dependencies                        |
+| `npm run dev`     | Start local dev server at `localhost:4321`  |
+| `npm run build`   | Build production site to `./dist/`          |
+| `npm run preview` | Preview build locally before deploying      |
