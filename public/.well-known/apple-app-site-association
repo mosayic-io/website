@@ -16,10 +16,5 @@
         ]
       }
     ]
-  },
-  "webcredentials": {
-    "apps": [
-      "<TEAM ID>.<BUNDLE ID>"
-    ]
   }
 }
