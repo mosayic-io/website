@@ -2,18 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["<TEAM ID>.<BUNDLE ID>"],
-        "components": [
-          {
-            "/": "/",
-            "exclude": true,
-            "comment": "Exclude the homepage from opening the app"
-          },
-          {
-            "/": "/*",
-            "comment": "Allow all other paths to open the app"
-          }
-        ]
+        "appIDs": ["3M9S28S6U9.com.kealystudio.demoflow"]
       }
     ]
   }

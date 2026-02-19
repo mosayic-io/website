@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "<BUNDLE ID>",
+      "package_name": "com.kealystudio.demoflow",
       "sha256_cert_fingerprints": [
-        "<SHA256 CERT FINGERPRINT>"
+        "EE:25:6A:4C:DB:52:5B:5C:CE:08:83:F3:DA:63:B6:F9:EB:4C:B0:46:B0:1E:9F:35:AD:36:B9:8C:02:23:FD:FE"
       ]
     }
   }
